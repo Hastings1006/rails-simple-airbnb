@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @flat.name %></h1>
+  <p><%= @flat.description %></p>
+  <i class="fa-solid fa-sterling-sign"><%=@flat.price_per_night %></i>
+  <i class="fa-solid fa-user-group"><%=@flat.number_of_guests%></i>
+  <%=link_to "back", flats_path%>
+  <%= link_to "Edit", edit_flat_path(@flat)%>
+  <%= link_to flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+    <i class='fa-regular fa-trash-can'></i>
+  <%end%>
+</div>

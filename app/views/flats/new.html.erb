@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Add a new flat</h1>
+  <%=simple_form_for(@flat) do |f| %>
+    <%= render "form", f: f %>
+    <%= f.submit%>
+  <%end%>
+</div>
